@@ -2,6 +2,9 @@ import static org.junit.Assert.*;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.runners.Parameterized.Parameters;
 
 
 public class CadenaAlumnoTest 
@@ -39,7 +42,6 @@ public class CadenaAlumnoTest
 		//al principio usando assertEquals me daba error en la prueba, lo solucione con assertArrayEquals
 		assertArrayEquals(resultadoReal, resultadoEsperado);
 	}
-	
 	//VALOR NULL
 	@Test
 	public void testToCharArray2()
@@ -53,6 +55,9 @@ public class CadenaAlumnoTest
 		assertArrayEquals(resultadoReal, resultadoEsperado);
 	}
 
+	
+	
+	
 	@Test
 	public void testSonIguales1() 
 	{
@@ -65,7 +70,6 @@ public class CadenaAlumnoTest
 		boolean resultadoEsperado = s1.equals(s2);
 		assertEquals(resultadoReal, resultadoEsperado);
 	}
-	
 	@Test
 	public void testSonIguales2() 
 	{
@@ -78,7 +82,6 @@ public class CadenaAlumnoTest
 		boolean resultadoEsperado = s1.equals(s2);
 		assertEquals(resultadoReal, resultadoEsperado);
 	}
-	
 	@Test
 	public void testSonIguales3() 
 	{
@@ -91,7 +94,6 @@ public class CadenaAlumnoTest
 		boolean resultadoEsperado = s1.equals(s2);
 		assertEquals(resultadoReal, resultadoEsperado);
 	}
-	
 	@Test
 	public void testSonIguales4() 
 	{
@@ -105,12 +107,63 @@ public class CadenaAlumnoTest
 		assertEquals(resultadoReal, resultadoEsperado);
 	}
 
+	
+	
+	
+	
 	@Test
-	public void testEsMayor() 
+	public void testEsMayor1() 
 	{
-		fail("No implementado aun");
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "entornos";
+		String s2 = "ento";
+		
+		boolean resultadoReal = cadena.esMayor(s1,s2);		
+		boolean resultadoEsperado = true;
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testEsMayor2() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "ento";
+		String s2 = "entornos";
+		
+		boolean resultadoReal = cadena.esMayor(s1,s2);		
+		boolean resultadoEsperado = false;
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testEsMayor3() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "entornos";
+		String s2 = "sonrotne";
+		
+		boolean resultadoReal = cadena.esMayor(s1,s2);		
+		boolean resultadoEsperado = false;
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testEsMayor4() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "entornos";
+		String s2 = "entornos";
+		
+		boolean resultadoReal = cadena.esMayor(s1,s2);		
+		boolean resultadoEsperado = false;
+		assertEquals(resultadoReal, resultadoEsperado);
 	}
 
+	
+	
+	
+	
 	@Test
 	public void testEsMenor() 
 	{
