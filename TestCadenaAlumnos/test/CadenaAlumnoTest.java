@@ -165,9 +165,52 @@ public class CadenaAlumnoTest
 	
 	
 	@Test
-	public void testEsMenor() 
+	public void testEsMenor1() 
 	{
-		fail("No implementado aun");
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "entornos";
+		String s2 = "ento";
+		
+		boolean resultadoReal = cadena.esMenor(s1,s2);		
+		boolean resultadoEsperado = false;
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testEsMenor2() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "ento";
+		String s2 = "entornos";
+		
+		boolean resultadoReal = cadena.esMenor(s1,s2);		
+		boolean resultadoEsperado = true;
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testEsMenor3() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "entornos";
+		String s2 = "sonrotne";
+		
+		boolean resultadoReal = cadena.esMenor(s1,s2);		
+		boolean resultadoEsperado = false;
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testEsMenor4()
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "entornos";
+		String s2 = "entornos";
+		
+		boolean resultadoReal = cadena.esMenor(s1,s2);		
+		boolean resultadoEsperado = false;
+		assertEquals(resultadoReal, resultadoEsperado);
 	}
 
 	@Test
