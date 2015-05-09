@@ -122,11 +122,18 @@ public class CadenaAlumno
 	 */
 	public boolean comparaIgnorandoMayusculas(String cadena1, String cadena2)//comprobado funciona
 	{
+				
 		char[] cd1 = cadena1.toCharArray();
 		char[] cd2 = cadena2.toCharArray();
 		
 		boolean resultado = true;
 		
+		//si su longitud no es la misma no pueden ser iguales
+		if	(cadena1.length() != cadena2.length())
+		{
+			resultado = false;
+		}
+		else
 		for (int i = 0; i < cadena1.length(); i++) 
 		{
 			if (cd1[i] < 65 || cd1[i] > 122 || (cd1[i] >90) && (cd1[i] < 97)) //si no es letra comprao directamente

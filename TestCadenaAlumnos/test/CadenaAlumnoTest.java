@@ -213,11 +213,35 @@ public class CadenaAlumnoTest
 		assertEquals(resultadoReal, resultadoEsperado);
 	}
 
+	
+	
+	
+	
 	@Test
-	public void testComparaIgnorandoMayusculas() 
+	public void testComparaIgnorandoMayusculas1() 
 	{
-		fail("No implementado aun");
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "ENTORNOS";
+		String s2 = "entornos";
+		
+		boolean resultadoReal = cadena.comparaIgnorandoMayusculas(s1,s2);		
+		boolean resultadoEsperado = s1.equalsIgnoreCase(s2);
+		assertEquals(resultadoReal, resultadoEsperado);
 	}
+	@Test
+	public void testComparaIgnorandoMayusculas2() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "ENTO";
+		String s2 = "entornos";
+		
+		boolean resultadoReal = cadena.comparaIgnorandoMayusculas(s1,s2);		
+		boolean resultadoEsperado = s1.equalsIgnoreCase(s2);
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	
 
 	@Test
 	public void testReemplazaTodos() 
