@@ -1,5 +1,5 @@
 /**
- * LAURA MARTÃ�NEZ PRIEGO
+ * LAURA MARTANEZ PRIEGO
  */
 
 
@@ -7,7 +7,7 @@ import static java.lang.System.out;
 
 
 /**
- * Clase Cadenas. Contiene una multitud de mÃ©todos para trabajar con cadenas de caracteres.
+ * Clase Cadenas. Contiene una multitud de metodos para trabajar con cadenas de caracteres.
  * @author Laura Martinez priego
  */
 public class CadenaAlumno
@@ -15,12 +15,12 @@ public class CadenaAlumno
 
 	
 	/**
-	 * funciÃ³n que combierte un string en un vector, array o matriz de caracteres.
-	 * ES UNA FUNCIÃ“N AUXILIAR PARA PODER TRABAJAR LAS DEMÃ�S.
+	 * funcion que combierte un string en un vector, array o matriz de caracteres.
+	 * ES UNA FUNCION AUXILIAR PARA PODER TRABAJAR LAS DEMAS.
 	 * @param cadenaSrt
-	 * @return un array que contiene los caracteres del string que nos habÃ­an pasado
+	 * @return un array que contiene los caracteres del string que nos habian pasado
 	 */
-	public char[] toCharArray( String cadenaSrt ) //funcion auxiliar para crear las demÃ¡s, funciona
+	public char[] toCharArray( String cadenaSrt ) //funcion auxiliar para crear las demas, funciona
 	{
 
 		   if ( cadenaSrt == null ) {
@@ -43,7 +43,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que compara dos cadenas y te dice si son iguales
+	 * metodo que compara dos cadenas y te dice si son iguales
 	 * @param cadena1
 	 * @param cadena2
 	 * @return true si son iguales
@@ -78,7 +78,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que compara dos cadenas y te indica si la primera de ellas es mayor o no
+	 * metodo que compara dos cadenas y te indica si la primera de ellas es mayor o no
 	 * @param cadena1
 	 * @param cadena2
 	 * @return true si es mayor
@@ -96,7 +96,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que compara dos cadenas y te indica si la primera de ellas es menor o no
+	 * metodo que compara dos cadenas y te indica si la primera de ellas es menor o no
 	 * @param cadena1
 	 * @param cadena2
 	 * @return true si la primera es menor
@@ -115,7 +115,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que compara dos cadenas y te dice si son iguales ignorando las mayÃºsculas que pueda haber
+	 * metodo que compara dos cadenas y te dice si son iguales ignorando las mayusculas que pueda haber
 	 * @param cadena1
 	 * @param cadena2
 	 * @return true si son iguales
@@ -149,7 +149,7 @@ public class CadenaAlumno
 					//comparo las dos directamente  
 					if (cd1[i] != cd2[i]) resultado = false;
 				} 
-				else //si la letra de cadena2 no es mayusculas comparo pasando cadena 1 a minÃºsculas
+				else //si la letra de cadena2 no es mayusculas comparo pasando cadena 1 a minusculas
 				{
 					if ((cd1[i] + 32) != cd2[i]) resultado = false;
 				}
@@ -158,11 +158,11 @@ public class CadenaAlumno
 			else //si no es mayusculas la letra de cadena1
 			{
 				//miro a ver si la letra equivalente de cadena2 es mayusculas 
-				if (cd2[i] <= 90) //en el caso de que si lo sea comparo pero pasando cadena 2 a minÃºsculas
+				if (cd2[i] <= 90) //en el caso de que si lo sea comparo pero pasando cadena 2 a minusculas
 				{
 					 if (cd1[i] != (cd2[i] + 32)) resultado = false;
 				}
-				else //si tampoco es mayÃºsculas comprado directamente 
+				else //si tampoco es mayusculas comprado directamente 
 				{
 					if (cd1[i] != cd2[i]) resultado = false;
 				}
@@ -180,7 +180,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que reemplaza de la cadena: cadena todos los regla/expresiÃ³n que hay por cambio
+	 * metodo que reemplaza de la cadena: cadena todos los regla/expresion que hay por cambio
 	 * @param cadena
 	 * @param regla
 	 * @param cambio
@@ -191,7 +191,7 @@ public class CadenaAlumno
 		char[] cad = cadena.toCharArray();
 		char[] reg = regla.toCharArray();
 		
-		String stringFinal = "";//irÃ© sumando char a este string vacio que serÃ¡ el resultado final
+		String stringFinal = "";//ire sumando char a este string vacio que sera el resultado final
 		
 		
 		for (int i = 0; i < cad.length; i++) //paso por todo los char de la cadena y los comparo con el primer char de la regla
@@ -217,7 +217,7 @@ public class CadenaAlumno
 						if (cad[j] != reg[j2]) 
 						{
 							//out.println(cad[j] + " es desigual a "+ reg[j2] );
-							reglaConfirmada = false; //y sÃ³lo en el caso de que los siguientes chars no coincidan lo cambio y termino el for
+							reglaConfirmada = false; //y solo en el caso de que los siguientes chars no coincidan lo cambio y termino el for
 							//out.println("poniendo a false regla");
 						}
 						else
@@ -228,14 +228,14 @@ public class CadenaAlumno
 					}
 				}
 				
-				if (reglaConfirmada == true) //si al salir del for, resulta que sÃ­ se encuentra la cadena
+				if (reglaConfirmada == true) //si al salir del for, resulta que si se encuentra la cadena
 				{
 					//sumare el cambio de la forma siguiente ->>				
 					
 					stringFinal += cambio;
 					//out.println("sumando el cambio");
 					
-					i += reg.length-1;//si hemos realizado un cambio, la siguiente vuelta empezarÃ¡ a comparar desde la posiciÃ³n de despuÃ©s de la regla.
+					i += reg.length-1;//si hemos realizado un cambio, la siguiente vuelta empezara a comparar desde la posicion de despues de la regla.
 					
 				}
 				else 
@@ -244,8 +244,8 @@ public class CadenaAlumno
 				}
 				
 			}
-			//sumarÃ© a la cadena el caracter de esta vuelta
-			//si ha habido coincidencia no llegarÃ¡ aquÃ­ 
+			//sumare a la cadena el caracter de esta vuelta
+			//si ha habido coincidencia no llegara aqui 
 			else
 			{
 				stringFinal += cad[i];
@@ -267,7 +267,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que reemplaza en la cadena// cadena la primera	regla/expresiÃ³n que hay por cambio
+	 * metodo que reemplaza en la cadena// cadena la primera	regla/expresion que hay por cambio
 	 * @param cadena
 	 * @param regla
 	 * @param cambio
@@ -278,7 +278,7 @@ public class CadenaAlumno
 		char[] cad = cadena.toCharArray();
 		char[] reg = regla.toCharArray();
 		
-		String stringFinal = "";//irÃ© sumando char a este string vacio que serÃ¡ el resultado final
+		String stringFinal = "";//ire sumando char a este string vacio que sera el resultado final
 		
 		boolean questComplete = false;
 		
@@ -307,7 +307,7 @@ public class CadenaAlumno
 						if (cad[j] != reg[j2]) 
 						{
 							//out.println(cad[j] + " es desigual a "+ reg[j2] );
-							reglaConfirmada = false; //y sÃ³lo en el caso de que los siguientes chars no coincidan lo cambio y termino el for
+							reglaConfirmada = false; //y solo en el caso de que los siguientes chars no coincidan lo cambio y termino el for
 							//out.println("poniendo a false regla");
 						}
 						else
@@ -318,7 +318,7 @@ public class CadenaAlumno
 					}
 				}
 				
-				if (reglaConfirmada == true) //si al salir del for, resulta que sÃ­ se encuentra la cadena
+				if (reglaConfirmada == true) //si al salir del for, resulta que si se encuentra la cadena
 				{
 					//sumare el cambio de la forma siguiente ->>				
 					
@@ -326,7 +326,7 @@ public class CadenaAlumno
 					//out.println("sumando el cambio");
 					questComplete = true;
 					
-					i += reg.length-1;//si hemos realizado un cambio, la siguiente vuelta empezarÃ¡ a comparar desde la posiciÃ³n de despuÃ©s de la regla.
+					i += reg.length-1;//si hemos realizado un cambio, la siguiente vuelta empezara a comparar desde la posicion de despues de la regla.
 					
 				}
 				else 
@@ -335,8 +335,8 @@ public class CadenaAlumno
 				}
 				
 			}
-			//sumarÃ© a la cadena el caracter de esta vuelta
-			//si ha habido coincidencia no llegarÃ¡ aquÃ­ 
+			//sumare a la cadena el caracter de esta vuelta
+			//si ha habido coincidencia no llegara aqui 
 			else
 			{
 				stringFinal += cad[i];
@@ -358,7 +358,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que nos divide una cadena en base a una regla/expresiÃ³n y un lÃ­mite que serÃ¡ el nÃºmero total de cadenas que queremos que nos muestre
+	 * metodo que nos divide una cadena en base a una regla/expresion y un limite que sera el numero total de cadenas que queremos que nos muestre
 	 * @param cadena
 	 * @param regla
 	 * @param limite
@@ -370,7 +370,7 @@ public class CadenaAlumno
 				char[] cad = cadena.toCharArray();
 				char[] reg = regla.toCharArray();
 				
-				String stringFinal = "";//irÃ© sumando char a este string vacio que serÃ¡ el resultado final
+				String stringFinal = "";//ire sumando char a este string vacio que sera el resultado final
 				int coincidencias = 0;
 				
 				
@@ -398,7 +398,7 @@ public class CadenaAlumno
 								if (cad[j] != reg[j2]) 
 								{
 									//out.println(cad[j] + " es desigual a "+ reg[j2] );
-									reglaConfirmada = false; //y sÃ³lo en el caso de que los siguientes chars no coincidan lo cambio y termino el for
+									reglaConfirmada = false; //y solo en el caso de que los siguientes chars no coincidan lo cambio y termino el for
 									//out.println("poniendo a false regla");
 								}
 								else
@@ -409,15 +409,15 @@ public class CadenaAlumno
 							}
 						}
 						
-						if (reglaConfirmada == true) //si al salir del for, resulta que sÃ­ era la cadena
+						if (reglaConfirmada == true) //si al salir del for, resulta que si era la cadena
 						{
-							//sumare el cambio como un salto de lÃ­nea que indicarÃ¡ el split y sumo uno a coincidencias->>				
+							//sumare el cambio como un salto de linea que indicara el split y sumo uno a coincidencias->>				
 							
 							stringFinal += "\n";
 							coincidencias++;
 							//out.println("sumando el cambio");
 													
-							i += reg.length-1;//si hemos realizado un cambio, la siguiente vuelta empezarÃ¡ a comparar desde la posiciÃ³n de despuÃ©s de la regla.
+							i += reg.length-1;//si hemos realizado un cambio, la siguiente vuelta empezara a comparar desde la posicion de despues de la regla.
 							
 						}
 						else 
@@ -426,8 +426,8 @@ public class CadenaAlumno
 						}
 						
 					}
-					//sumarÃ© a la cadena el caracter de esta vuelta
-					//si ha habido coincidencia no llegarÃ¡ aquÃ­ 
+					//sumare a la cadena el caracter de esta vuelta
+					//si ha habido coincidencia no llegara aqui 
 					else
 					{
 						stringFinal += cad[i];
@@ -451,7 +451,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que nos divide una cadena en base a una regla/expresiÃ³n
+	 * metodo que nos divide una cadena en base a una regla/expresion
 	 * @param cadena
 	 * @param regla
 	 */
@@ -461,7 +461,7 @@ public class CadenaAlumno
 			char[] cad = cadena.toCharArray();
 			char[] reg = regla.toCharArray();
 			
-			String stringFinal = "";//irÃ© sumando char a este string vacio que serÃ¡ el resultado final
+			String stringFinal = "";//ire sumando char a este string vacio que sera el resultado final
 			
 			
 			for (int i = 0; i < cad.length; i++) //paso por todo los char de la cadena y los comparo con el primer char de la regla
@@ -488,7 +488,7 @@ public class CadenaAlumno
 							if (cad[j] != reg[j2]) 
 							{
 								//out.println(cad[j] + " es desigual a "+ reg[j2] );
-								reglaConfirmada = false; //y sÃ³lo en el caso de que los siguientes chars no coincidan lo cambio y termino el for
+								reglaConfirmada = false; //y solo en el caso de que los siguientes chars no coincidan lo cambio y termino el for
 								//out.println("poniendo a false regla");
 							}
 							else
@@ -499,14 +499,14 @@ public class CadenaAlumno
 						}
 					}
 					
-					if (reglaConfirmada == true) //si al salir del for, resulta que sÃ­ era la cadena
+					if (reglaConfirmada == true) //si al salir del for, resulta que si era la cadena
 					{
-						//sumare el cambio como un salto de lÃ­nea que indicarÃ¡ el split ->>				
+						//sumare el cambio como un salto de linea que indicara el split ->>				
 						
 						stringFinal += "\n";
 						//out.println("sumando el cambio");
 												
-						i += reg.length-1;//si hemos realizado un cambio, la siguiente vuelta empezarÃ¡ a comparar desde la posiciÃ³n de despuÃ©s de la regla.
+						i += reg.length-1;//si hemos realizado un cambio, la siguiente vuelta empezara a comparar desde la posicion de despues de la regla.
 						
 					}
 					else 
@@ -515,8 +515,8 @@ public class CadenaAlumno
 					}
 					
 				}
-				//sumarÃ© a la cadena el caracter de esta vuelta
-				//si ha habido coincidencia no llegarÃ¡ aquÃ­ 
+				//sumare a la cadena el caracter de esta vuelta
+				//si ha habido coincidencia no llegara aqui 
 				else
 				{
 					stringFinal += cad[i];
@@ -539,7 +539,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que devuelve un String sin espacios previos/posteriores
+	 * metodo que devuelve un String sin espacios previos/posteriores
 	 * @param cadena
 	 * @return un string sin los espacios
 	 */
@@ -566,7 +566,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que dado un String te devuelve ese mismo pero en mayÃºsculas
+	 * metodo que dado un String te devuelve ese mismo pero en mayusculas
 	 * @param cadena
 	 * @return un string en mayusculas
 	 */
@@ -576,7 +576,7 @@ public class CadenaAlumno
 		String cadenaFinal = "";
 	
 		
-		for (int i = 0; i < cadena.length(); i++) //comprobamos uno por uno los carÃ¡cteres
+		for (int i = 0; i < cadena.length(); i++) //comprobamos uno por uno los caracteres
 		{
 			//out.println(cd[i]);
 			int numCaracter = (int)cd[i];
@@ -596,7 +596,7 @@ public class CadenaAlumno
 					//out.println(cadenaFinal);
 
 				} 
-				else //si no es mayusculas la letra de cadena1 aÃ±ado pasÃ¡ndola a mayÃºsculas previamente
+				else //si no es mayusculas la letra de cadena1 aÃ±ado pasandola a mayusculas previamente
 				{
 					numCaracter = numCaracter -32;
 					char cter = (char)(numCaracter);					
@@ -619,7 +619,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que te convierteun string todo a minÃºsculas
+	 * metodo que te convierteun string todo a minusculas
 	 * @param cadena
 	 * @return un string en minusculas
 	 */
@@ -628,7 +628,7 @@ public class CadenaAlumno
 		char[] cd1 = cadena.toCharArray();
 		cadena = "";
 		
-		for (int i = 0; i < cd1.length; i++) //comprobamos uno por uno los carÃ¡cteres
+		for (int i = 0; i < cd1.length; i++) //comprobamos uno por uno los caracteres
 		{
 			if (cd1[i] < 65 || cd1[i] > 122 || (cd1[i] >90) && (cd1[i] < 97)) //si no es letra aÃ±ado a la cadena final directamente
 			{
@@ -641,7 +641,7 @@ public class CadenaAlumno
 					cadena += cd1[i];
 
 				} 
-				else //si no es mayusculas la letra de cadena1 aÃ±ado pasÃ¡ndola a minÃºsculas previamente
+				else //si no es mayusculas la letra de cadena1 aÃ±ado pasandola a minusculas previamente
 				{
 					cd1[i] = (char) (cd1[i] + 32);					
 					cadena += cd1[i];
@@ -661,7 +661,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que te devuelve la longitud de una cadena
+	 * metodo que te devuelve la longitud de una cadena
 	 * @param cadena
 	 * @return la longitud de la cadena en un long.
 	 */
@@ -680,7 +680,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que te indica si la cadena comienza con el prefijo dado
+	 * metodo que te indica si la cadena comienza con el prefijo dado
 	 * @param cadena
 	 * @param prefijo
 	 * @return true si empieza por ese prefijo o false si no lo hace
@@ -707,7 +707,7 @@ public class CadenaAlumno
 					//comparo las dos directamente  
 					if (cd1[i] != pre[i]) resultado = false;
 				} 
-				else //si la letra del prefijo no es mayusculas comparo pasando cadena 1 a minÃºsculas
+				else //si la letra del prefijo no es mayusculas comparo pasando cadena 1 a minusculas
 				{
 					if ((cd1[i] + 32) != pre[i]) resultado = false;
 				}
@@ -716,11 +716,11 @@ public class CadenaAlumno
 			else //si no es mayusculas la letra de cadena
 			{
 				//miro a ver si la letra equivalente del prefijo es mayusculas 
-				if (pre[i] <= 90) //en el caso de que si lo sea comparo pero pasando el prefijo a minÃºsculas
+				if (pre[i] <= 90) //en el caso de que si lo sea comparo pero pasando el prefijo a minusculas
 				{
 					 if (cd1[i] != (pre[i] + 32)) resultado = false;
 				}
-				else //si tampoco es mayÃºsculas comprado directamente 
+				else //si tampoco es mayusculas comprado directamente 
 				{
 					if (cd1[i] != pre[i]) resultado = false;
 				}
@@ -738,7 +738,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que te indica	si la cadena acaba con el sufijo dado
+	 * metodo que te indica	si la cadena acaba con el sufijo dado
 	 * @param cadena
 	 * @param sufijo
 	 * @return true si termina en el sufijo, false si no lo hace
@@ -755,7 +755,7 @@ public class CadenaAlumno
 		
 		int numSufijo = 0 ;
 		
-		if (ptoInicio < 0) ; //no pasarÃ¡ nada
+		if (ptoInicio < 0) ; //no pasara nada
 		else 
 		{
 			for (int i = ptoInicio; i < cadena.length(); i++) 
@@ -776,7 +776,7 @@ public class CadenaAlumno
 						if (cd1[i] != suf[numSufijo]) resultado = false;
 						//out.println("cd es "+cd1[i] + " y sufijo es " +suf[numSufijo]);
 					} 
-					else //si la letra del suffijo no es mayusculas comparo pasando cadena 1 a minÃºsculas
+					else //si la letra del suffijo no es mayusculas comparo pasando cadena 1 a minusculas
 					{
 						if ((cd1[i] + 32) != suf[numSufijo]) resultado = false;
 					}
@@ -785,11 +785,11 @@ public class CadenaAlumno
 				else //si no es mayusculas la letra de cadena
 				{
 					//miro a ver si la letra equivalente del suffijo es mayusculas 
-					if (suf[numSufijo] <= 90) //en el caso de que si lo sea comparo pero pasando el suffijo a minÃºsculas
+					if (suf[numSufijo] <= 90) //en el caso de que si lo sea comparo pero pasando el suffijo a minusculas
 					{
 						 if (cd1[i] != (suf[numSufijo] + 32)) resultado = false;
 					}
-					else //si tampoco es mayÃºsculas comprado directamente 
+					else //si tampoco es mayusculas comprado directamente 
 					{
 						if (cd1[i] != suf[numSufijo]) resultado = false;
 					}
@@ -813,10 +813,10 @@ public class CadenaAlumno
 	
 	
 	/**
-	 *  mÃ©todo que te devuelve la posiciÃ³n en la que se encuentra una letra/conjunto de letras en un string
+	 *  metodo que te devuelve la posicion en la que se encuentra una letra/conjunto de letras en un string
 	 * @param cadena
 	 * @param letra
-	 * @return un -1 si no estÃ¡ la cadena o char y un numero long que indica l aposiciÃ³n si estÃ¡
+	 * @return un -1 si no esta la cadena o char y un numero long que indica l aposicion si esta
 	 */
 	public long posicionPrimeraCadena(String cadena, String letras) //funciona, comprobado!!
 	{
@@ -841,16 +841,16 @@ public class CadenaAlumno
 					{
 						if (cad[j] != reg[j2]) 
 						{
-							reglaConfirmada = false; //y sÃ³lo en el caso de que los siguientes chars no coincidan lo cambio a false
+							reglaConfirmada = false; //y solo en el caso de que los siguientes chars no coincidan lo cambio a false
 							
 						}
 						j++;
 					}
 				}
 				
-				if (reglaConfirmada == true) //si al salir del for, resulta que sÃ­ se ha encontrado la cadena
+				if (reglaConfirmada == true) //si al salir del for, resulta que si se ha encontrado la cadena
 				{
-					//devuelvo la posiciÃ³n en la que se encuentra ->>				
+					//devuelvo la posicion en la que se encuentra ->>				
 					return i;
 					
 				}
@@ -870,7 +870,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo que te devuelve una parte del string, para ello deberÃ¡s de indicarle desde donde quieres que te devuelva
+	 * metodo que te devuelve una parte del string, para ello deberas de indicarle desde donde quieres que te devuelva
 	 * @param cadena
 	 * @param posicionInicio
 	 * @return una cadena de caracteres (string)
@@ -894,7 +894,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * funciÃ³n que te devuelve una parte del string, para ello	deberÃ¡s de indicarle desde dÃ³nde quieres que te devuelva y hasta dÃ³nde
+	 * funcion que te devuelve una parte del string, para ello	deberas de indicarle desde donde quieres que te devuelva y hasta donde
 	 * @param cadena
 	 * @param posicionInicio
 	 * @param posicionFinal
@@ -921,7 +921,7 @@ public class CadenaAlumno
 	
 	
 	/**
-	 * mÃ©todo elcual te concatena dos cadenas usando el operando +
+	 * metodo elcual te concatena dos cadenas usando el operando +
 	 * @param cadena1
 	 * @param cadena2
 	 * @return una cadena de caracteres (string)
