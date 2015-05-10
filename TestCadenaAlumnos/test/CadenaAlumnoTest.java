@@ -1,12 +1,15 @@
 import static org.junit.Assert.*;
 
-import org.junit.BeforeClass;
+
 import org.junit.Test;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.runners.Parameterized.Parameters;
 
 
+/**
+ * Clase para probar los métods de la clase CadenaAlumno.java
+ * 
+ * @author Laura Martinez Priego 1º DAM
+ *
+ */
 public class CadenaAlumnoTest 
 {
 	/*@BeforeClass 
@@ -441,9 +444,28 @@ public class CadenaAlumnoTest
 	
 	
 	@Test
-	public void testEmpiezaCon() 
-{
-		fail("No implementado aun");
+	public void testEmpiezaCon1() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "Infrahumano";
+		String s2 = "In";
+		
+		boolean resultadoReal = cadena.acabaEn(s1, s2);		
+		boolean resultadoEsperado = s1.endsWith(s2);
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testEmpiezaCon2() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "Infrahumano";
+		String s2 = "fra";
+		
+		boolean resultadoReal = cadena.acabaEn(s1, s2);		
+		boolean resultadoEsperado = s1.endsWith(s2);
+		assertEquals(resultadoReal, resultadoEsperado);
 	}
 
 	
@@ -451,12 +473,24 @@ public class CadenaAlumnoTest
 	
 	
 	@Test
-	public void testAcabaEn() 
+	public void testAcabaEn1() 
 	{
 		CadenaAlumno cadena = new CadenaAlumno();
 		
 		String s1 = "Escandaloso";
 		String s2 = "oso";
+		
+		boolean resultadoReal = cadena.acabaEn(s1, s2);		
+		boolean resultadoEsperado = s1.endsWith(s2);
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testAcabaEn2() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "Escandaloso";
+		String s2 = "can";
 		
 		boolean resultadoReal = cadena.acabaEn(s1, s2);		
 		boolean resultadoEsperado = s1.endsWith(s2);
@@ -485,18 +519,56 @@ public class CadenaAlumnoTest
 	
 	
 	@Test
-	public void testExtraerSubstringStringInt() {
-		fail("No implementado aun");
+	public void testExtraerSubstringStringInt() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "supercalifragilisticoespialidoso";
+		int n1 = 9;
+		
+		String resultadoReal = cadena.extraerSubstring(s1, n1);
+		
+		//System.out.println(resultadoReal);
+		
+		String resultadoEsperado = s1.substring(n1);
+		
+		//System.out.println(resultadoEsperado);
+		
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testExtraerSubstringStringIntInt() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "supercalifragilisticoespialidoso";
+		int n1 = 9;
+		int n2 = 20;
+		
+		String resultadoReal = cadena.extraerSubstring(s1, n1, n2);
+		
+		String resultadoEsperado = s1.substring(n1, n2);
+		
+		assertEquals(resultadoReal, resultadoEsperado);
 	}
 
+	
+	
+	
+	
 	@Test
-	public void testExtraerSubstringStringIntInt() {
-		fail("No implementado aun");
-	}
-
-	@Test
-	public void testConcatenaCadenas() {
-		fail("No implementado aun");
+	public void testConcatenaCadenas() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "supercalifragi";
+		String s2 = "listicoespialidoso";
+		
+		String resultadoReal = cadena.concatenaCadenas(s1, s2);
+		
+		String resultadoEsperado = s1.concat(s2);
+		
+		assertEquals(resultadoReal, resultadoEsperado);
 	}
 
 }

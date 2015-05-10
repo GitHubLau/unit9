@@ -1,5 +1,5 @@
 /**
- * LAURA MARTANEZ PRIEGO
+ * LAURA MARTINEZ PRIEGO
  */
 
 
@@ -905,7 +905,7 @@ public class CadenaAlumno
 		char[] cd1 = cadena.toCharArray();
 		String substring = "";
 		
-		for (int i = posicionInicio-1; i < posicionFinal; i++) 
+		for (int i = posicionInicio; i < posicionFinal; i++) 
 		{
 			substring += cd1[i];
 		}
