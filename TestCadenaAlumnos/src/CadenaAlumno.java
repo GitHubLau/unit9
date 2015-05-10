@@ -162,10 +162,7 @@ public class CadenaAlumno
 				{
 					 if (cd1[i] != (cd2[i] + 32)) resultado = false;
 				}
-				else //si tampoco es mayusculas comprado directamente 
-				{
-					if (cd1[i] != cd2[i]) resultado = false;
-				}
+				
 			
 			}
 		}
@@ -304,7 +301,7 @@ public class CadenaAlumno
 					for (int j2 = 0; j2 < reg.length; j2++) //comparo desde la posicion indicada con la regla
 					{
 						//out.println("empiezo 2for");
-						if (cad[j] != reg[j2]) 
+						if (cad[j] != reg[j2])  
 						{
 							//out.println(cad[j] + " es desigual a "+ reg[j2] );
 							reglaConfirmada = false; //y solo en el caso de que los siguientes chars no coincidan lo cambio y termino el for
@@ -775,19 +772,20 @@ public class CadenaAlumno
 						//comparo las dos directamente  
 						if (cd1[i] != suf[numSufijo]) resultado = false;
 						//out.println("cd es "+cd1[i] + " y sufijo es " +suf[numSufijo]);
-					} 
-					else //si la letra del suffijo no es mayusculas comparo pasando cadena 1 a minusculas
+					}
+					else //si la letra del suffijo no es mayusculas da false pk debe ser como metodo endsWith
 					{
-						if ((cd1[i] + 32) != suf[numSufijo]) resultado = false;
+						resultado = false;
 					}
 
 				} 
 				else //si no es mayusculas la letra de cadena
 				{
 					//miro a ver si la letra equivalente del suffijo es mayusculas 
-					if (suf[numSufijo] <= 90) //en el caso de que si lo sea comparo pero pasando el suffijo a minusculas
+					if (suf[numSufijo] <= 90) //en el caso de que si lo sea 
 					{
-						 if (cd1[i] != (suf[numSufijo] + 32)) resultado = false;
+						//esta modificación la realizo porque el metodo endsWith si distingue may de min y debo hacerlo igual
+						 resultado = false;
 					}
 					else //si tampoco es mayusculas comprado directamente 
 					{
@@ -880,7 +878,7 @@ public class CadenaAlumno
 		char[] cd1 = cadena.toCharArray();
 		String substring = "";
 		
-		for (int i = posicionInicio-1; i < cd1.length; i++) 
+		for (int i = posicionInicio; i < cd1.length; i++) 
 		{
 			substring += cd1[i];
 		}

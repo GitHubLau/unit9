@@ -252,6 +252,31 @@ public class CadenaAlumnoTest
 		boolean resultadoEsperado = s1.equalsIgnoreCase(s2);
 		assertEquals(resultadoReal, resultadoEsperado);
 	}
+	@Test
+	public void testComparaIgnorandoMayusculas3() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "1,34";
+		String s2 = "1,34";
+		
+		boolean resultadoReal = cadena.comparaIgnorandoMayusculas(s1,s2);		
+		boolean resultadoEsperado = s1.equalsIgnoreCase(s2);
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testComparaIgnorandoMayusculas4() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "entornos";
+		String s2 = "ENTORNOS";
+		
+		boolean resultadoReal = cadena.comparaIgnorandoMayusculas(s1,s2);		
+		boolean resultadoEsperado = s1.equalsIgnoreCase(s2);
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	
 	
 	
 	
@@ -307,32 +332,12 @@ public class CadenaAlumnoTest
 		CadenaAlumno cadena = new CadenaAlumno();
 		
 		String s1 = "laura";
-		String s2 = "o";
+		String s2 = "ok";
 		String s3 = "j";
 		
 		String resultadoReal = cadena.reemplazaPrimero(s1,s2,s3);		
 		String resultadoEsperado = s1.replaceFirst(s2, s3);
 		assertEquals(resultadoReal, resultadoEsperado);
-	}
-
-	
-	
-	
-	
-	@Test
-	public void testMuestraSplitLimite() 
-	{
-		fail("No implementado aun");
-	}
-
-	
-	
-	
-	
-	@Test
-	public void testMuestraSplit() 
-	{
-		fail("No implementado aun");
 	}
 
 	
@@ -451,8 +456,8 @@ public class CadenaAlumnoTest
 		String s1 = "Infrahumano";
 		String s2 = "In";
 		
-		boolean resultadoReal = cadena.acabaEn(s1, s2);		
-		boolean resultadoEsperado = s1.endsWith(s2);
+		boolean resultadoReal = cadena.empiezaCon(s1, s2);		
+		boolean resultadoEsperado = s1.startsWith(s2);
 		assertEquals(resultadoReal, resultadoEsperado);
 	}
 	@Test
@@ -463,8 +468,77 @@ public class CadenaAlumnoTest
 		String s1 = "Infrahumano";
 		String s2 = "fra";
 		
-		boolean resultadoReal = cadena.acabaEn(s1, s2);		
-		boolean resultadoEsperado = s1.endsWith(s2);
+		boolean resultadoReal = cadena.empiezaCon(s1, s2);		
+		boolean resultadoEsperado = s1.startsWith(s2);
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testEmpiezaCon3() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "1.894,";
+		String s2 = "4,";
+		
+		boolean resultadoReal = cadena.empiezaCon(s1, s2);		
+		boolean resultadoEsperado = s1.startsWith(s2);
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testEmpiezaCon4() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "entornos";
+		String s2 = "NOS";
+		
+		boolean resultadoReal = cadena.empiezaCon(s1, s2);
+		
+		//System.out.println(resultadoReal);
+	
+		
+		boolean resultadoEsperado = s1.startsWith(s2);
+		
+		//System.out.println(resultadoEsperado);
+		
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testEmpiezaCon5() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "ENTORNOS";
+		String s2 = "NOS";
+		
+		boolean resultadoReal = cadena.empiezaCon(s1, s2);
+		
+		//System.out.println(resultadoReal);
+	
+		
+		boolean resultadoEsperado = s1.startsWith(s2);
+		
+		//System.out.println(resultadoEsperado);
+		
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testEmpiezaCon6() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "ENTORNOS";
+		String s2 = "nos";
+		
+		boolean resultadoReal = cadena.empiezaCon(s1, s2);
+		
+		//System.out.println(resultadoReal);
+	
+		
+		boolean resultadoEsperado = s1.startsWith(s2);
+		
+		//System.out.println(resultadoEsperado);
+		
 		assertEquals(resultadoReal, resultadoEsperado);
 	}
 
@@ -494,6 +568,75 @@ public class CadenaAlumnoTest
 		
 		boolean resultadoReal = cadena.acabaEn(s1, s2);		
 		boolean resultadoEsperado = s1.endsWith(s2);
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testAcabaEn3() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "1.894,";
+		String s2 = "4,";
+		
+		boolean resultadoReal = cadena.acabaEn(s1, s2);		
+		boolean resultadoEsperado = s1.endsWith(s2);
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testAcabaEn4() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "entornos";
+		String s2 = "NOS";
+		
+		boolean resultadoReal = cadena.acabaEn(s1, s2);
+		
+		//System.out.println(resultadoReal);
+	
+		
+		boolean resultadoEsperado = s1.endsWith(s2);
+		
+		//System.out.println(resultadoEsperado);
+		
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testAcabaEn5() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "ENTORNOS";
+		String s2 = "NOS";
+		
+		boolean resultadoReal = cadena.acabaEn(s1, s2);
+		
+		//System.out.println(resultadoReal);
+	
+		
+		boolean resultadoEsperado = s1.endsWith(s2);
+		
+		//System.out.println(resultadoEsperado);
+		
+		assertEquals(resultadoReal, resultadoEsperado);
+	}
+	@Test
+	public void testAcabaEn6() 
+	{
+		CadenaAlumno cadena = new CadenaAlumno();
+		
+		String s1 = "ENTORNOS";
+		String s2 = "nos";
+		
+		boolean resultadoReal = cadena.acabaEn(s1, s2);
+		
+		//System.out.println(resultadoReal);
+	
+		
+		boolean resultadoEsperado = s1.endsWith(s2);
+		
+		//System.out.println(resultadoEsperado);
+		
 		assertEquals(resultadoReal, resultadoEsperado);
 	}
 
